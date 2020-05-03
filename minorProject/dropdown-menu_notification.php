@@ -5,7 +5,18 @@
       <div class="panel_body_custom">
 
 <?php
-// $con = mysqli_connect('localhost','root','','igdtuDB') or die("ERROR");
+// 
+$url = parse_url("mysql://b997849ceafd11:d2115bcc@us-cdbr-east-06.cleardb.net/heroku_e7b0ec896a85723?reconnect=true");
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+//
+
+$conn = 
+new mysqli($server, $username, $password, $db)
+ or die("ERROR");
 $user_notif_qry = mysqli_query($con,"SELECT * FROM `user_notification` WHERE notif_receiverID = $login_id LIMIT 25");
 while ($user_notif_sql = mysqli_fetch_array($user_notif_qry))
 {

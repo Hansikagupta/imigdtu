@@ -1,6 +1,17 @@
 <?php 
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$con = mysqli_connect('localhost','root','','igdtuDB') or die("ERROR");
+
+$url = parse_url("mysql://b997849ceafd11:d2115bcc@us-cdbr-east-06.cleardb.net/heroku_e7b0ec896a85723?reconnect=true");
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+//
+
+$conn = 
+new mysqli($server, $username, $password, $db)
+ or die("ERROR");
 $studentID = $_REQUEST['studentID'];
 $verfy_sql = mysqli_query($con,"SELECT * FROM `user_student_detail` WHERE student_ID = '$studentID'");
 $verfy_qry = mysqli_fetch_array($verfy_sql);
