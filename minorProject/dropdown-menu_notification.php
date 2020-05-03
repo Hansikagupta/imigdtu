@@ -5,7 +5,7 @@
       <div class="panel_body_custom">
 
 <?php
-// $con = mysqli_connect('localhost','root','','tracerdata') or die("ERROR");
+// $con = mysqli_connect('localhost','root','','igdtuDB') or die("ERROR");
 $user_notif_qry = mysqli_query($con,"SELECT * FROM `user_notification` WHERE notif_receiverID = $login_id LIMIT 25");
 while ($user_notif_sql = mysqli_fetch_array($user_notif_qry))
 {

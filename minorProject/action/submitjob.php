@@ -1,6 +1,6 @@
 <?php 
 
-$con = mysqli_connect('localhost','root','','tracerdata') or die("ERROR");
+$con = mysqli_connect('localhost','root','','igdtuDB') or die("ERROR");
 if (isset($_POST['submit-job'])) {
     echo $Title = $_POST['Title'];
     echo $course = $_POST['course'];

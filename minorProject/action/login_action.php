@@ -34,7 +34,7 @@ if (isset($_POST['submit-teacher'])) {
 
 function login(){
 
-			$con = mysqli_connect('localhost','root','','tracerdata') or die("ERROR");
+			$con = mysqli_connect('localhost','root','','igdtuDB') or die("ERROR");
 			// Define $username and $password
 			$username=$_POST['username'];
 			$password=$_POST['password'];

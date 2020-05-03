@@ -53,7 +53,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "tracerdata";
+$db = "igdtuDB";
  
 try {
    

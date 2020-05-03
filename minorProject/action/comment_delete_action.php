@@ -1,7 +1,7 @@
 <?php 
 
 include('../session.php'); 
-$con = mysqli_connect('localhost','root','','tracerdata') or die("ERROR");
+$con = mysqli_connect('localhost','root','','igdtuDB') or die("ERROR");
 
 
 	$cid = $_REQUEST['cid'];

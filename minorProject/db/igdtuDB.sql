@@ -19,36 +19,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tracerdata`
+-- Database: `igdtuDB`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cvsu_college`
+-- Table structure for table `igdtu_college`
 --
 
-CREATE TABLE `cvsu_college` (
+CREATE TABLE `igdtu_college` (
   `colleges_ID` int(11) UNSIGNED NOT NULL,
   `college_name` varchar(150) DEFAULT NULL,
   `college_acronym` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `cvsu_college`
+-- Dumping data for table `igdtu_college`
 --
 
-INSERT INTO `cvsu_college` (`colleges_ID`, `college_name`, `college_acronym`) VALUES
+INSERT INTO `igdtu_college` (`colleges_ID`, `college_name`, `college_acronym`) VALUES
 (1, 'College of Engineering and Information Technology', 'CEIT'),
 (2, 'College of Art and Sciences', 'CAS');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cvsu_course`
+-- Table structure for table `igdtu_course`
 --
 
-CREATE TABLE `cvsu_course` (
+CREATE TABLE `igdtu_course` (
   `course_ID` int(11) UNSIGNED NOT NULL,
   `course_departmentID` int(11) UNSIGNED DEFAULT NULL,
   `course_name` varchar(100) DEFAULT NULL,
@@ -56,10 +56,10 @@ CREATE TABLE `cvsu_course` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `cvsu_course`
+-- Dumping data for table `igdtu_course`
 --
 
-INSERT INTO `cvsu_course` (`course_ID`, `course_departmentID`, `course_name`, `course_acronym`) VALUES
+INSERT INTO `igdtu_course` (`course_ID`, `course_departmentID`, `course_name`, `course_acronym`) VALUES
 (1, 2, 'Bachelor of Science in Information Technology', 'BSIT'),
 (2, 2, 'Bachelor of Science in Computer Science', 'BSCS'),
 (3, 2, 'Bachelor of Science in Office Administration', 'BSOA');
@@ -67,10 +67,10 @@ INSERT INTO `cvsu_course` (`course_ID`, `course_departmentID`, `course_name`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cvsu_department`
+-- Table structure for table `igdtu_department`
 --
 
-CREATE TABLE `cvsu_department` (
+CREATE TABLE `igdtu_department` (
   `department_ID` int(11) UNSIGNED NOT NULL,
   `department_collegeID` int(11) UNSIGNED DEFAULT NULL,
   `department_name` varchar(100) DEFAULT NULL,
@@ -78,10 +78,10 @@ CREATE TABLE `cvsu_department` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `cvsu_department`
+-- Dumping data for table `igdtu_department`
 --
 
-INSERT INTO `cvsu_department` (`department_ID`, `department_collegeID`, `department_name`, `department_acronym`) VALUES
+INSERT INTO `igdtu_department` (`department_ID`, `department_collegeID`, `department_name`, `department_acronym`) VALUES
 (1, 1, 'Computer Science', 'COMSCI'),
 (2, 1, 'Information Technology', 'IT'),
 (3, 1, 'Office Administration', 'OA');
@@ -1136,22 +1136,22 @@ INSERT INTO `view_counter` (`view_ID`, `view_topicID`, `view_count`) VALUES
 --
 
 --
--- Indexes for table `cvsu_college`
+-- Indexes for table `igdtu_college`
 --
-ALTER TABLE `cvsu_college`
+ALTER TABLE `igdtu_college`
   ADD PRIMARY KEY (`colleges_ID`);
 
 --
--- Indexes for table `cvsu_course`
+-- Indexes for table `igdtu_course`
 --
-ALTER TABLE `cvsu_course`
+ALTER TABLE `igdtu_course`
   ADD PRIMARY KEY (`course_ID`),
   ADD KEY `course_departmentID` (`course_departmentID`);
 
 --
--- Indexes for table `cvsu_department`
+-- Indexes for table `igdtu_department`
 --
-ALTER TABLE `cvsu_department`
+ALTER TABLE `igdtu_department`
   ADD PRIMARY KEY (`department_ID`),
   ADD KEY `department_collegeID` (`department_collegeID`);
 
@@ -1396,21 +1396,21 @@ ALTER TABLE `view_counter`
 --
 
 --
--- AUTO_INCREMENT for table `cvsu_college`
+-- AUTO_INCREMENT for table `igdtu_college`
 --
-ALTER TABLE `cvsu_college`
+ALTER TABLE `igdtu_college`
   MODIFY `colleges_ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `cvsu_course`
+-- AUTO_INCREMENT for table `igdtu_course`
 --
-ALTER TABLE `cvsu_course`
+ALTER TABLE `igdtu_course`
   MODIFY `course_ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `cvsu_department`
+-- AUTO_INCREMENT for table `igdtu_department`
 --
-ALTER TABLE `cvsu_department`
+ALTER TABLE `igdtu_department`
   MODIFY `department_ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -1616,16 +1616,16 @@ ALTER TABLE `view_counter`
 --
 
 --
--- Constraints for table `cvsu_course`
+-- Constraints for table `igdtu_course`
 --
-ALTER TABLE `cvsu_course`
-  ADD CONSTRAINT `cvsu_course_ibfk_1` FOREIGN KEY (`course_departmentID`) REFERENCES `cvsu_department` (`department_ID`);
+ALTER TABLE `igdtu_course`
+  ADD CONSTRAINT `igdtu_course_ibfk_1` FOREIGN KEY (`course_departmentID`) REFERENCES `igdtu_department` (`department_ID`);
 
 --
--- Constraints for table `cvsu_department`
+-- Constraints for table `igdtu_department`
 --
-ALTER TABLE `cvsu_department`
-  ADD CONSTRAINT `cvsu_department_ibfk_1` FOREIGN KEY (`department_collegeID`) REFERENCES `cvsu_college` (`colleges_ID`);
+ALTER TABLE `igdtu_department`
+  ADD CONSTRAINT `igdtu_department_ibfk_1` FOREIGN KEY (`department_collegeID`) REFERENCES `igdtu_college` (`colleges_ID`);
 
 --
 -- Constraints for table `forum_comment`
@@ -1673,7 +1673,7 @@ ALTER TABLE `message_thread_participant`
 -- Constraints for table `suggested_job`
 --
 ALTER TABLE `suggested_job`
-  ADD CONSTRAINT `suggested_job_ibfk_1` FOREIGN KEY (`job_Course`) REFERENCES `cvsu_course` (`course_ID`);
+  ADD CONSTRAINT `suggested_job_ibfk_1` FOREIGN KEY (`job_Course`) REFERENCES `igdtu_course` (`course_ID`);
 
 --
 -- Constraints for table `survey_forms`
@@ -1759,7 +1759,7 @@ ALTER TABLE `user_notification`
 -- Constraints for table `user_student_detail`
 --
 ALTER TABLE `user_student_detail`
-  ADD CONSTRAINT `user_student_detail_ibfk_1` FOREIGN KEY (`student_department`) REFERENCES `cvsu_course` (`course_ID`),
+  ADD CONSTRAINT `user_student_detail_ibfk_1` FOREIGN KEY (`student_department`) REFERENCES `igdtu_course` (`course_ID`),
   ADD CONSTRAINT `user_student_detail_ibfk_2` FOREIGN KEY (`student_userID`) REFERENCES `user_account` (`user_ID`),
   ADD CONSTRAINT `user_student_detail_ibfk_3` FOREIGN KEY (`student_civilStat`) REFERENCES `marital_status` (`ID`);
 
@@ -1768,7 +1768,7 @@ ALTER TABLE `user_student_detail`
 --
 ALTER TABLE `user_teacher_detail`
   ADD CONSTRAINT `user_teacher_detail_ibfk_1` FOREIGN KEY (`teacher_userID`) REFERENCES `user_account` (`user_ID`),
-  ADD CONSTRAINT `user_teacher_detail_ibfk_2` FOREIGN KEY (`teacher_department`) REFERENCES `cvsu_department` (`department_ID`),
+  ADD CONSTRAINT `user_teacher_detail_ibfk_2` FOREIGN KEY (`teacher_department`) REFERENCES `igdtu_department` (`department_ID`),
   ADD CONSTRAINT `user_teacher_detail_ibfk_3` FOREIGN KEY (`teacher_civilStat`) REFERENCES `marital_status` (`ID`);
 
 --
