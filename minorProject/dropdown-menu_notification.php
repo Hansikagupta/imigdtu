@@ -14,7 +14,7 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 //
 
-$conn = 
+$con = 
 new mysqli($server, $username, $password, $db)
  or die("ERROR");
 $user_notif_qry = mysqli_query($con,"SELECT * FROM `user_notification` WHERE notif_receiverID = $login_id LIMIT 25");

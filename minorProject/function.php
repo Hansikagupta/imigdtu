@@ -59,12 +59,12 @@
 
 try {
 
-    $conn = new mysqli($server, $username, $password, $db);
+    $con = new mysqli($server, $username, $password, $db);
      //echo "Connected successfully";
     }
 catch(exception $e)
     {
     echo "Connection failed: " . $e->getMessage();
     }
-    return $conn;
+    return $con;
 }

@@ -4,7 +4,7 @@ if(isset($_SESSION['login_user']))
 {
             $user=$_SESSION['login_user'];// passing the session user to new user variable
             include('db.php');
-            $query = mysqli_query($con,"SELECT * FROM `user_account` WHERE `user_name`= '$user'", $connection); //SQL query to fetch information of registerd users and finds user match.
+            $query = mysqli_query($con,"SELECT * FROM `user_account` WHERE `user_name`= '$user'", $conection); //SQL query to fetch information of registerd users and finds user match.
             $rows = mysqli_fetch_assoc($query);
                 if ($rows['user_level'] == '1' || $rows['user_level'] == '2' || $rows['user_level'] == '3') //checking if acclevel is equal to 0
                 {

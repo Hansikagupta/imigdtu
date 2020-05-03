@@ -1,5 +1,5 @@
 <?php
- 
+
 $url = parse_url("mysql://b997849ceafd11:d2115bcc@us-cdbr-east-06.cleardb.net/heroku_e7b0ec896a85723?reconnect=true");
 
 $server = $url["host"];
@@ -8,27 +8,27 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 //
 
-$conn = 
+$con =
 new mysqli($server, $username, $password, $db)
  or die("ERROR");
 
  if(isset($_POST["Import_student"])){
-		
-		$filename=$_FILES["file"]["tmp_name"];		
- 
- 	
+
+		$filename=$_FILES["file"]["tmp_name"];
+
+
 		 if($_FILES["file"]["size"] > 0)
 		 {
 		  	$file = fopen($filename, "r");
 		  		$count = 0;
 	        while (($getData = fgetcsv($file, 10000, ",")) !== FALSE)
 	         {
- 
+
  				if ($count == 0) {
- 					
+
  				}
  				else{
-					$student_IDNumber = $getData[0]	;			
+					$student_IDNumber = $getData[0]	;
 					$student_fName = $getData[1];
 					$student_mName = $getData[2];
 					$student_lName = $getData[3];
@@ -50,7 +50,7 @@ new mysqli($server, $username, $password, $db)
 					$sql = mysqli_query($con,"SELECT * FROM `marital_status` WHERE marital_Name like '%$student_civilStat%'");
 					$mstat = mysqli_fetch_array($sql);
 					$student_civilStat = $mstat['ID'];
-					
+
 					$sql = mysqli_query($con,"SELECT * FROM `cvsu_course` WHERE course_name like '%$student_department%' || course_acronym like '%$student_department%'");
 					$dep = mysqli_fetch_array($sql);
 					$student_department = $dep['course_ID'];
@@ -60,14 +60,14 @@ new mysqli($server, $username, $password, $db)
 					if (strtoupper($student_gender) == 'FEMALE') {
 						$student_gender = "F";
 					}
-	 				$sql = "INSERT INTO `user_student_detail` 
+	 				$sql = "INSERT INTO `user_student_detail`
 (
-`student_ID`, 
+`student_ID`,
 `student_userID`,
  `student_img`,
  `student_IDNumber`,
  `student_fName`,
- `student_mName`, 
+ `student_mName`,
 `student_lName`,
  `student_address`,
  `student_civilStat`,
@@ -79,8 +79,8 @@ new mysqli($server, $username, $password, $db)
  `student_department`,
  `student_status`,
  `student_secretquestion`,
- `student_secretanswer`) 
-VALUES 
+ `student_secretanswer`)
+VALUES
 (
 NULL,
  NULL,
@@ -106,7 +106,7 @@ NULL,
 						echo "<script type=\"text/javascript\">
 								alert(\"Invalid File:Please Upload CSV File.\");
 								window.location = \"../recordstudent.php\"
-							  </script>";		
+							  </script>";
 					}
 					else {
 						  echo "<script type=\"text/javascript\">
@@ -117,18 +117,18 @@ NULL,
 					// echo "<script>alert('successfully Imported!');
 					// 									window.location='../recordstudent.php';
 					// 								</script>";
- 					
+
  				}
 	         $count++;
 	         }
-			
-	         fclose($file);	
+
+	         fclose($file);
 		 }
 
-	}	 
+	}
 // if(isset($_POST["Import_teacher"])){
 
-// 	"INSERT INTO `user_teacher_detail` 
+// 	"INSERT INTO `user_teacher_detail`
 // 	(`teacher_ID`,
 // 	`teacher_userID`,
 // 	`teacher_img`,
@@ -144,7 +144,7 @@ NULL,
 // 	`teacher_department`,
 // 	`teacher_status`,
 // 	`teacher_secretquestion`,
-// 	`teacher_secretanswer`) 
+// 	`teacher_secretanswer`)
 // 	VALUES (
 // 	NULL,
 // 	NULL,
@@ -165,18 +165,18 @@ NULL,
 
 // }
   if(isset($_POST["Export"])){
-		 
-      header('Content-Type: text/csv; charset=utf-8');  
-      header('Content-Disposition: attachment; filename=data.csv');  
-      $output = fopen("php://output", "w");  
-      fputcsv($output, array('ID', 'First Name', 'Last Name', 'Email', 'Joining Date'));  
-      $query = "SELECT * from employeeinfo ORDER BY emp_id DESC";  
-      $result = mysqli_query($con, $query);  
-      while($row = mysqli_fetch_assoc($result))  
-      {  
-           fputcsv($output, $row);  
-      }  
-      fclose($output);  
- } 
- 
+
+      header('Content-Type: text/csv; charset=utf-8');
+      header('Content-Disposition: attachment; filename=data.csv');
+      $output = fopen("php://output", "w");
+      fputcsv($output, array('ID', 'First Name', 'Last Name', 'Email', 'Joining Date'));
+      $query = "SELECT * from employeeinfo ORDER BY emp_id DESC";
+      $result = mysqli_query($con, $query);
+      while($row = mysqli_fetch_assoc($result))
+      {
+           fputcsv($output, $row);
+      }
+      fclose($output);
+ }
+
  ?>

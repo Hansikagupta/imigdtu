@@ -1,5 +1,5 @@
 {
   "require": {
-    "ext-mysqli":"*"
+    "php":"^7.2.0"
   }
 }

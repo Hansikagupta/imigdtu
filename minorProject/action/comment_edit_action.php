@@ -10,7 +10,7 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 //
 
-$conn = 
+$con = 
 new mysqli($server, $username, $password, $db)
  or die("ERROR");
 ?>
