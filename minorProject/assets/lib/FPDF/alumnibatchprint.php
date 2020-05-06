@@ -14,7 +14,7 @@ class PDF extends FPDF{
 		$this->Image('../../img/logo.png',25,6,20);
 		$this->SetFont('Times','B',15);
 		$this->Cell(80);
-		$this->Cell(30,10,'CvSU - CEIT DIT ONLINE TRACER STUDY',0,1,'C');
+		$this->Cell(30,10,'igdtu - CEIT DIT ONLINE TRACER STUDY',0,1,'C');
 		$this->Cell(80);
 
 		if ($req_course == 2) {

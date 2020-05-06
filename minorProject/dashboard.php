@@ -176,7 +176,7 @@ while($rowCount = mysqli_fetch_array($jobCount)){
                                     <tbody>
                                 <?php 
                                 $sj = mysqli_query($con,"SELECT sj.job_Title FROM `user_student_detail` usd
-INNER JOIN cvsu_department cd ON usd.student_department = cd.department_ID
+INNER JOIN igdtu_department cd ON usd.student_department = cd.department_ID
 inner join suggested_job sj ON cd.department_ID = sj.job_ID
  WHERE usd.student_ID = '$login_id' ORDER by rand()");
                                 while ($sj1 = mysqli_fetch_array($sj)){

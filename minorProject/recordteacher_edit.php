@@ -176,7 +176,7 @@ else
 
                                     <div class="col-lg-8">
                                     <?php 
-                                    $query_dep = mysqli_query($con,"SELECT * FROM `cvsu_department`");
+                                    $query_dep = mysqli_query($con,"SELECT * FROM `igdtu_department`");
                                     ?>
                                         <select class="form-control" name="teacher_department" required=""  value="<?php echo $teacher_address;?>">
                                         <?php

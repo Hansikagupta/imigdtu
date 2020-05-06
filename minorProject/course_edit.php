@@ -2,7 +2,7 @@
 require_once('db.php');
 if (isset($_REQUEST['id']) ){
  $id = $_REQUEST['id'];
-$sql = mysqli_query($con,"SELECT * FROM cvsu_course where course_ID = $id");
+$sql = mysqli_query($con,"SELECT * FROM igdtu_course where course_ID = $id");
 $d = mysqli_fetch_array($sql);
 ?>
 
@@ -24,7 +24,7 @@ $d = mysqli_fetch_array($sql);
     <div class="col-sm-10"> 
       
       <?php 
- $sql = mysqli_query($con,"SELECT * FROM `cvsu_department");
+ $sql = mysqli_query($con,"SELECT * FROM `igdtu_department");
       
       ?>
       <select class="form-control" name="Department">

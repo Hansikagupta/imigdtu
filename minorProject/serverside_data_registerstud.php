@@ -26,7 +26,7 @@ cc.course_acronym course,
 usd.student_admission,
 usd.student_year_grad,usd.student_ID ";
 $sql.=" FROM `user_student_detail` usd
-LEFT JOIN cvsu_course cc ON cc.course_ID = usd.student_department";
+LEFT JOIN igdtu_course cc ON cc.course_ID = usd.student_department";
 $query=mysqli_query($con, $sql) or die("serverside_data_registerstud.php: get employees");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
@@ -39,7 +39,7 @@ cc.course_acronym course,
 usd.student_admission,
 usd.student_year_grad,usd.student_ID";
 $sql.=" FROM `user_student_detail` usd
-LEFT JOIN cvsu_course cc ON cc.course_ID = usd.student_department WHERE 1=1";
+LEFT JOIN igdtu_course cc ON cc.course_ID = usd.student_department WHERE 1=1";
 if( !empty($requestData['search']['value']) ) {   // if there is a search parameter, $requestData['search']['value'] contains search parameter
 	$sql.=" AND ( usd.student_IDNumber LIKE '%".$requestData['search']['value']."%' ";    
 	$sql.=" OR CONCAT(`usd`.student_lName,', ',`usd`.student_fName,', ',

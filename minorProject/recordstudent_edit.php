@@ -180,7 +180,7 @@ else
 
                                     <div class="col-lg-8">
                                     <?php 
-                                    $query_dep = mysqli_query($con,"SELECT * FROM `cvsu_course`");
+                                    $query_dep = mysqli_query($con,"SELECT * FROM `igdtu_course`");
                                     ?>
                                         <select class="form-control" name="student_department" required=""  value="<?php echo $student_address;?>">
                                         <?php

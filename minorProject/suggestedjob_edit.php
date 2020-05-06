@@ -18,7 +18,7 @@ $d = mysqli_fetch_array($sql);
     <div class="col-sm-10"> 
       
       <?php 
- $sql = mysqli_query($con,"SELECT * FROM `cvsu_course`");
+ $sql = mysqli_query($con,"SELECT * FROM `igdtu_course`");
       
       ?>
       <select class="form-control" name="course">

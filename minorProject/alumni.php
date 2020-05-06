@@ -70,7 +70,7 @@ else
                           <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <?php
-  $dep =mysqli_query($con,"SELECT * FROM `cvsu_department`"); 
+  $dep =mysqli_query($con,"SELECT * FROM `igdtu_department`"); 
                               while ($data = mysqli_fetch_array($dep)) {
                                 
                                 if ($data['department_ID'] == 1) {
@@ -88,7 +88,7 @@ else
 <!-- Tab panes -->
 <div class="tab-content">
    <?php 
-    $dep =mysqli_query($con,"SELECT * FROM `cvsu_department`"); 
+    $dep =mysqli_query($con,"SELECT * FROM `igdtu_department`"); 
     while ($data = mysqli_fetch_array($dep)) {
       
       if ($data['department_ID'] == 1) {

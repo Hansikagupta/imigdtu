@@ -179,7 +179,7 @@ else
 
                                     <div class="col-lg-8">
                                         <?php 
-                                    $query_dep = mysqli_query($con,"SELECT * FROM `cvsu_department` WHERE `department_ID` = $teacher_department");
+                                    $query_dep = mysqli_query($con,"SELECT * FROM `igdtu_department` WHERE `department_ID` = $teacher_department");
                                     ?>
                                         
                                         <?php

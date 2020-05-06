@@ -240,7 +240,7 @@ else
                                                      <p><span>Course </span>:
                                                     <?php
                                                     $z = mysqli_query($con,"SELECT cc.course_name FROM `user_student_detail` usd
-INNER JOIN cvsu_course cc ON usd.student_department = cc.course_ID WHERE student_ID = $login_id");
+INNER JOIN igdtu_course cc ON usd.student_department = cc.course_ID WHERE student_ID = $login_id");
                                                     $z = mysqli_fetch_array($z);
                                                    echo $z['course_name'];
                                                   }

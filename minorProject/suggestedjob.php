@@ -104,7 +104,7 @@ else
 <?php 
 
 $sql = mysqli_query($con,"SELECT sj.job_ID,sj.job_Title,cc.course_name FROM `suggested_job` sj
-INNER JOIN  cvsu_course cc ON sj.job_Course = cc.course_ID ORDER BY `job_ID` ASC");
+INNER JOIN  igdtu_course cc ON sj.job_Course = cc.course_ID ORDER BY `job_ID` ASC");
 while ($d = mysqli_fetch_array($sql)) {
     ?>
 <tr>
@@ -213,7 +213,7 @@ while ($d = mysqli_fetch_array($sql)) {
     <div class="col-sm-10"> 
       
       <?php 
- $sql = mysqli_query($con,"SELECT * FROM `cvsu_course`");
+ $sql = mysqli_query($con,"SELECT * FROM `igdtu_course`");
       
       ?>
       <select class="form-control" name="course">

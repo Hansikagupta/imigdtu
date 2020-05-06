@@ -103,8 +103,8 @@ else
                  
 <?php 
 
-$sql = mysqli_query($con,"SELECT cc.course_ID,cd.department_name ,cc.course_name FROM cvsu_course cc
-INNER JOIN cvsu_department cd ON cd.department_ID = cc.course_departmentID ");
+$sql = mysqli_query($con,"SELECT cc.course_ID,cd.department_name ,cc.course_name FROM igdtu_course cc
+INNER JOIN igdtu_department cd ON cd.department_ID = cc.course_departmentID ");
 while ($d = mysqli_fetch_array($sql)) {
     ?>
 <tr>
@@ -219,7 +219,7 @@ while ($d = mysqli_fetch_array($sql)) {
     <div class="col-sm-10"> 
       
       <?php 
- $sql = mysqli_query($con,"SELECT * FROM `cvsu_department`");
+ $sql = mysqli_query($con,"SELECT * FROM `igdtu_department`");
       
       ?>
       <select class="form-control" name="Department">

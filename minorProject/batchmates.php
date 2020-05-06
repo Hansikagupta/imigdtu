@@ -75,11 +75,11 @@ else
                              <ul class="nav nav-tabs">
                               <?PHP 
                               $student_sql = mysqli_query($con,"SELECT YEAR(usd.student_year_grad) as student_year_grad,cd.department_ID ,cd.department_name FROM `user_student_detail` usd
-                              INNER JOIN cvsu_department cd ON usd.student_department = cd.department_ID WHERE usd.student_ID = $login_id");
+                              INNER JOIN igdtu_department cd ON usd.student_department = cd.department_ID WHERE usd.student_ID = $login_id");
                               $student_d = mysqli_fetch_array($student_sql);
                               $s_department_ID = $student_d['department_ID'];
                               $s_student_year_grad =$student_d['student_year_grad']; 
-                              $dep =mysqli_query($con,"SELECT * FROM `cvsu_department`"); 
+                              $dep =mysqli_query($con,"SELECT * FROM `igdtu_department`"); 
                               while ($data = mysqli_fetch_array($dep)) {
                                 
                                 if ($data['department_ID'] == $s_department_ID) {
@@ -97,7 +97,7 @@ else
                               <div class="tab-content">
 
                               <?php 
-                              $dep =mysqli_query($con,"SELECT * FROM `cvsu_department`"); 
+                              $dep =mysqli_query($con,"SELECT * FROM `igdtu_department`"); 
                               while ($data = mysqli_fetch_array($dep)) {
                                 
                                 if ($data['department_ID'] == $s_department_ID) {
@@ -115,7 +115,7 @@ else
                                     </thead>
                                     <tbody>
                                     <?php 
-                                    $s = mysqli_query($con,"SELECT student_fName,student_mName,student_lName,student_IDNumber FROM `user_student_detail` usd INNER JOIN cvsu_department cd ON usd.student_department = cd.department_ID WHERE department_ID = ".$data['department_ID']." AND student_year_grad LIKE '%$s_student_year_grad%'");
+                                    $s = mysqli_query($con,"SELECT student_fName,student_mName,student_lName,student_IDNumber FROM `user_student_detail` usd INNER JOIN igdtu_department cd ON usd.student_department = cd.department_ID WHERE department_ID = ".$data['department_ID']." AND student_year_grad LIKE '%$s_student_year_grad%'");
                                     $no = 0;
                                     while ($f_all = mysqli_fetch_array($s)) {
                                       $no+=$no+1;
@@ -154,7 +154,7 @@ else
                                     </thead>
                                     <tbody>
                                     <?php 
-                                    $s = mysqli_query($con,"SELECT student_fName,student_mName,student_lName,student_IDNumber FROM `user_student_detail` usd INNER JOIN cvsu_department cd ON usd.student_department = cd.department_ID WHERE department_ID = ".$data['department_ID']." AND student_year_grad LIKE '%$s_student_year_grad%'");
+                                    $s = mysqli_query($con,"SELECT student_fName,student_mName,student_lName,student_IDNumber FROM `user_student_detail` usd INNER JOIN igdtu_department cd ON usd.student_department = cd.department_ID WHERE department_ID = ".$data['department_ID']." AND student_year_grad LIKE '%$s_student_year_grad%'");
                                     $no = 0;
                                     while ($f_all = mysqli_fetch_array($s)) {
                                       $no+=$no+1;
@@ -185,13 +185,13 @@ else
 
 
                               <!-- SELECT YEAR(usd.student_year_grad),cd.department_ID ,cd.department_name FROM `user_student_detail` usd
-                              INNER JOIN cvsu_department cd ON usd.student_department = cd.department_ID WHERE usd.student_ID = 1
+                              INNER JOIN igdtu_department cd ON usd.student_department = cd.department_ID WHERE usd.student_ID = 1
 
 
                               SELECT YEAR(usd.student_year_grad),cd.department_ID ,cd.department_name FROM `user_student_detail` usd
-                              INNER JOIN cvsu_department cd ON usd.student_department = cd.department_ID 
+                              INNER JOIN igdtu_department cd ON usd.student_department = cd.department_ID 
 
-                              SELECT YEAR(usd.student_year_grad),cd.department_ID ,cd.department_name,usd.student_fName FROM `user_student_detail` usd INNER JOIN cvsu_department cd ON usd.student_department = cd.department_ID WHERE department_ID = 1,2,3 -->
+                              SELECT YEAR(usd.student_year_grad),cd.department_ID ,cd.department_name,usd.student_fName FROM `user_student_detail` usd INNER JOIN igdtu_department cd ON usd.student_department = cd.department_ID WHERE department_ID = 1,2,3 -->
 
 
                               </div>

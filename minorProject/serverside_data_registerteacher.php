@@ -45,7 +45,7 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$teacher_ID = $row["teacher_ID"];
 	$nestedData[] = $row["teacher_lName"].', '.$row["teacher_fName"].' '.$row["teacher_mName"].'.';
 	$teacher_department = $row["teacher_department"];
-	$x = mysqli_query($con,"SELECT `department_name` FROM `cvsu_department` WHERE department_ID = '$teacher_department'");
+	$x = mysqli_query($con,"SELECT `department_name` FROM `igdtu_department` WHERE department_ID = '$teacher_department'");
 	$a = mysqli_fetch_array($x);
 
 	$nestedData[] = $a["department_name"];

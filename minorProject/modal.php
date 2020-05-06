@@ -149,7 +149,7 @@ To accommodate IT courses offerings; the College was renamed as the <strong>Coll
                     <img class="img-circle" src="assets/img/creator/img2.jpg" alt="">
                     <h4><strong>John Ervin N. Villadolid</strong> </h4>
                     <p>
-                        Bachelor Of Science In Computer Science ( BSCS )<br> Cavite State University (CvSU)
+                        Bachelor Of Science In Computer Science ( BSCS )<br> Cavite State University (igdtu)
                     </p>
                     <p>
                        <a href="https://web.facebook.com/The.OtherProtagonist" target="_blank"><i class="fa fa-facebook-square fa-2x color-facebook"></i></a>
@@ -163,7 +163,7 @@ To accommodate IT courses offerings; the College was renamed as the <strong>Coll
                     <img class="img-circle" src="assets/img/creator/img3.jpg" alt="">
                     <h4><strong>Ezra Marie F. Ramos</strong> </h4>
                     <p>
-                        Professor(Thesis adviser)<br> Cavite State University (CvSU)
+                        Professor(Thesis adviser)<br> Cavite State University (igdtu)
 
                     </p>
                     <p>
@@ -195,7 +195,7 @@ To accommodate IT courses offerings; the College was renamed as the <strong>Coll
                     <img class="img-circle" src="assets/img/creator/img4.jpg" alt="">
                     <h4><strong> Lorielle S. Rocela</strong> </h4>
                     <p>
-                        Professor(Technical Critic)<br> Cavite State University (CvSU)
+                        Professor(Technical Critic)<br> Cavite State University (igdtu)
 
                     </p>
                     <p>
@@ -211,7 +211,7 @@ To accommodate IT courses offerings; the College was renamed as the <strong>Coll
                     <img class="img-circle" src="assets/img/creator/webcreator.jpg" alt="">
                     <h4><strong>Rhalp Darren Cabrera</strong> </h4>
                     <p>
-                        Bachelor Of Science In Information Technology<br>( BSIT )<br> Cavite State University (CvSU)
+                        Bachelor Of Science In Information Technology<br>( BSIT )<br> Cavite State University (igdtu)
 
                     </p>
                     <p>
