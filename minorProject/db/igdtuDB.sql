@@ -60,9 +60,9 @@ CREATE TABLE `igdtu_course` (
 --
 
 INSERT INTO `igdtu_course` (`course_ID`, `course_departmentID`, `course_name`, `course_acronym`) VALUES
-(1, 2, 'Bachelor of Science in Information Technology', 'BSIT'),
-(2, 2, 'Bachelor of Science in Computer Science', 'BSCS'),
-(3, 2, 'Bachelor of Science in Office Administration', 'BSOA');
+(1, 2, 'Bachelor of technology in Information Technology', 'BSIT'),
+(2, 2, 'Bachelor of technology in Computer Science', 'BSCS'),
+(3, 2, 'Bachelor of technology in Office Administration', 'BSOA');
 
 -- --------------------------------------------------------
 

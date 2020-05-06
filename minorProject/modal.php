@@ -149,7 +149,7 @@ To accommodate IT courses offerings; the College was renamed as the <strong>Coll
                     <img class="img-circle" src="assets/img/creator/img2.jpg" alt="">
                     <h4><strong>John Ervin N. Villadolid</strong> </h4>
                     <p>
-                        Bachelor Of Science In Computer Science ( BSCS )<br> Cavite State University (igdtu)
+                        Bachelor of technology In Computer Science ( BSCS )<br> Cavite State University (igdtu)
                     </p>
                     <p>
                        <a href="https://web.facebook.com/The.OtherProtagonist" target="_blank"><i class="fa fa-facebook-square fa-2x color-facebook"></i></a>
@@ -211,7 +211,7 @@ To accommodate IT courses offerings; the College was renamed as the <strong>Coll
                     <img class="img-circle" src="assets/img/creator/webcreator.jpg" alt="">
                     <h4><strong>Rhalp Darren Cabrera</strong> </h4>
                     <p>
-                        Bachelor Of Science In Information Technology<br>( BSIT )<br> Cavite State University (igdtu)
+                        Bachelor of technology In Information Technology<br>( BSIT )<br> Cavite State University (igdtu)
 
                     </p>
                     <p>
@@ -227,7 +227,7 @@ To accommodate IT courses offerings; the College was renamed as the <strong>Coll
                 <div class="col-md-8 col-sm-8 text-justify">
 
                     <p class="lead" style=" text-indent: 50px;">
-                         I’m Taking Up Bachelor of Science in Information Technology (BSIT), Like to Waste Time on The Front of Computer Making Random Things Like Programming I Know (C++, NetBeans Java, HTML, CSS, PHP, JSCRIPT, Visual Basic, Assembly, Storyboard Scripting), About on Arts and Music? I Used the Following Tools (Paint, Paint Tool Sai, Photoshop CC) And Used Them to Make Digital Art, Background, Cover, Editing Images and Also Edit Video, Sounds/Remix but Literally Not EXPERT More than Of My Skill Learned by My Self Study, My Psychology Friends say “Jack-of-all-trades, Master Of None”.
+                         I’m Taking Up Bachelor of technology in Information Technology (BSIT), Like to Waste Time on The Front of Computer Making Random Things Like Programming I Know (C++, NetBeans Java, HTML, CSS, PHP, JSCRIPT, Visual Basic, Assembly, Storyboard Scripting), About on Arts and Music? I Used the Following Tools (Paint, Paint Tool Sai, Photoshop CC) And Used Them to Make Digital Art, Background, Cover, Editing Images and Also Edit Video, Sounds/Remix but Literally Not EXPERT More than Of My Skill Learned by My Self Study, My Psychology Friends say “Jack-of-all-trades, Master Of None”.
 
                     </p>
                 </div>
