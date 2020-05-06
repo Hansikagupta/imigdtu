@@ -115,9 +115,9 @@ new mysqli($server, $username, $password, $db)
 				                NULL,
 				                 NULL);";
 				$res = mysqli_query($con,$sql);
-				$last_id = mysqli_insert_id($con);
-				$chk = "UPDATE `user_student_detail` 
-						SET `student_IDNumber` = '$student_sinumber' WHERE `user_student_detail`.`student_ID` = $last_id";
+				//$last_id = mysqli_insert_id($con);
+				// $chk = "UPDATE `user_student_detail` 
+				// 		SET `student_IDNumber` = '$student_sinumber' WHERE `user_student_detail`.`student_ID` = $last_id";
 				
 				echo "<script>alert('Successfully Update!');
 																	window.location='../recordstudent.php';
