@@ -82,6 +82,8 @@ $res['student_img'];
                  ?>
                 </ul>
             </li> -->
+            <li><a href="https://guarded-hamlet-22791.herokuapp.com/">Doubt Support</a>
+                </li>
 
             <li class="dropdown ">
                 <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon-user"></i>Notification<i class="icon-sort-down"></i></a>
