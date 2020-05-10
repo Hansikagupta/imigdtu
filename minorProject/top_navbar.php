@@ -82,7 +82,7 @@ $res['student_img'];
                  ?>
                 </ul>
             </li> -->
-            <li><a href="https://guarded-hamlet-22791.herokuapp.com/">Doubt Support</a>
+            <li><a href="https://guarded-hamlet-22791.herokuapp.com/" target="_blank">Doubt Support</a>
                 </li>
 
             <li class="dropdown ">
