@@ -131,6 +131,17 @@ LEFT JOIN survey s ON s.survey_ID = sq.survey_ID WHERE s.visibility = 1 order by
 ?>
 
 <button type="button" class="btn btn-info btn-sm pull-right"  data-toggle="modal" data-target="#add_survey" id="">Add Survey</button>
+<div>
+  <button onclick="myFunction()">View survey response</button>
+  <script>
+  function myFunction() {
+    location.replace("survey_response_survey.php")
+  }
+  </script>
+</div>
+
+
+
 <br><br>
 <table class="table table-bordered table-advance table-hover" id="example1">
   <thead>
