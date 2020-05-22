@@ -495,7 +495,7 @@ function option(){
         <h4 class="modal-title">Add Survey</h4>
       </div>
       <div class="modal-body">
-       <form method="POST" action="action/survey">
+       <form method="POST" action="action/survey.php">
          <div class="form-group">
           <label for="email">Survey Name</label>
           <input type="text" class="form-control" id="surveyname" name="surveyname">
