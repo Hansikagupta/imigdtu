@@ -15,7 +15,7 @@ session_start();
 if (isset($_POST['add-survey'])) {
 
 	$surveyname = $_POST['surveyname'];
-	mysqli_query($con,"INSERT INTO `survey` (`survey_ID`, `survey_name`, `survey_date`, `visibility`) VALUES (NULL, '$surveyname', CURRENT_TIMESTAMP, 0);");
+	mysqli_query($con,"INSERT INTO `survey` (`survey_ID`, `survey_name`, `survey_date`, `visibility`) VALUES (NULL, '$surveyname', CURRENT_TIMESTAMP, 1);");
 	echo "<script>alert('Succesfully Add Survey !');
 		window.location='../survey_mng.php';
 	</script>";

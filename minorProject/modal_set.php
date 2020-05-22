@@ -4,7 +4,7 @@ if (isset($_REQUEST['id']) ){
 $id= $_REQUEST['id'];
 
 ?>
-<form method="POST" action="action/survey">
+<form method="POST" action="action/survey.php">
 	<div class="text-center">
   <input type="hidden" name="id" value="<?php echo $id?>">
 <div class="btn-group ">

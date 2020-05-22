@@ -3,7 +3,7 @@ include("db.php");
 if (isset($_REQUEST['id']) ){
 $id= $_REQUEST['id'];
 ?>
- <form  method="POST" action="action/survey">
+ <form  method="POST" action="action/survey.php">
         <input type="hidden" name="s_ID" value="<?php echo $id?>">
         <div class="form-group">
           <label for="">Question:</label>
@@ -48,7 +48,7 @@ $id= $_REQUEST['id'];
         <h4 class="modal-title">Add New Survey</h4>
       </div>
       <div class="modal-body">
-        <form action="action/survey" method="POST">
+        <form action="action/survey.php" method="POST">
           <div class="form-group">
             <label for="surveyname">Survey Title</label>
             <input type="text" class="form-control" id="surveyname" name="surveyname">

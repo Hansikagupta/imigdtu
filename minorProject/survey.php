@@ -122,7 +122,7 @@ $i = 1;
                                      <?php echo $titleVal[0] ?></h1>
                                       </header>
 
-                               <form class="" style="padding:15px;" method="POST" action="action/survey" id="form">
+                               <form class="" style="padding:15px;" method="POST" action="action/survey.php" id="form">
                                      <?php
                                       while ($data = mysqli_fetch_array($sql)){
                                        $i;

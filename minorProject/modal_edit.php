@@ -64,7 +64,7 @@ FROM `survey_anweroptions` WHERE survey_qID = $q_ID");
         <h4 class="modal-title">Edit Question</h4>
       </div>
       <div class="modal-body">
-        <form action="action/survey">
+        <form action="action/survey.php">
           <div class="form-group">
             <label class="control-label col-sm-2" for="email">Select Question</label>
             <div class="col-sm-10">
@@ -135,7 +135,7 @@ FROM `survey_anweroptions` WHERE survey_qID = $q_ID");
         <h4 class="modal-title">Edit Title</h4>
       </div>
       <div class="modal-body">
-        <form  method="POST" action="action/survey">
+        <form  method="POST" action="action/survey.php">
         	<input type="hidden" name="ID" value="<?php echo $id?>"> 
           <div class="form-group">
             <label for="Title">Title</label>
